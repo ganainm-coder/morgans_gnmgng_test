@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#273b35">
+  <title>Den lilla drakens äventyr</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">✦</div>
+      <div><p class="eyebrow">ETT LITET ROLLSPEL</p><h1>Den lilla drakens äventyr</h1></div>
+      <button id="restart" class="quiet-button" type="button" title="Börja om äventyret">↻ <span>Börja om</span></button>
+    </header>
+
+    <section id="hero-screen" class="panel hero-screen">
+      <div class="hero-art" aria-hidden="true"><span class="moon">☾</span><span class="castle">⌂</span><span class="dragon">🐉</span><span class="stars">✦　·　✧</span></div>
+      <p class="eyebrow">SKOGEN VISKAR DITT NAMN</p>
+      <h2>Vem är du, äventyrare?</h2>
+      <p class="intro">En liten drake har försvunnit med byns magiska stjärna. Välj din hjälte och ge dig ut på ett mysigt, lagom farligt äventyr.</p>
+      <div class="hero-choices">
+        <button class="hero-card" data-hero="riddare" type="button"><span class="hero-emoji">🛡️</span><strong>Riddaren</strong><small>Modig och tålig</small><span class="hero-stat">♥ 14 liv</span></button>
+        <button class="hero-card" data-hero="magiker" type="button"><span class="hero-emoji">🪄</span><strong>Magikern</strong><small>Klurig och kraftfull</small><span class="hero-stat">✧ 10 liv</span></button>
+        <button class="hero-card" data-hero="skogsvän" type="button"><span class="hero-emoji">🏹</span><strong>Skogsvännen</strong><small>Snabb och listig</small><span class="hero-stat">❀ 12 liv</span></button>
+      </div>
+      <p class="tiny-note">Inga konton, inga köp — bara fantasi och lite tärningstur.</p>
+    </section>
+
+    <section id="adventure-screen" class="adventure-layout" hidden>
+      <aside class="panel status-panel">
+        <div class="avatar" id="hero-avatar">🛡️</div>
+        <p class="eyebrow">DIN HJÄLTE</p><h2 id="hero-name">Riddaren</h2>
+        <div class="stat-line"><span>❤️ Liv</span><strong id="hp-value">14 / 14</strong></div>
+        <div class="meter"><span id="hp-meter"></span></div>
+        <div class="stat-line"><span>⭐ Erfarenhet</span><strong id="xp-value">0 XP</strong></div>
+        <div class="stat-line"><span>🪙 Guldmynt</span><strong id="coin-value">0</strong></div>
+        <div class="stat-line"><span>🎒 Ryggsäck</span><strong id="item-count">0 saker</strong></div>
+        <ul id="inventory" class="inventory"><li>Ryggsäcken är tom</li></ul>
+        <div class="dice-box"><span>🎲</span><div><strong>Äventyrets tärning</strong><small>Slå för lite extra tur</small></div><button id="roll-dice" type="button" class="dice-button">Slå!</button></div>
+        <p id="dice-result" class="dice-result" aria-live="polite"></p>
+      </aside>
+      <section class="panel story-panel">
+        <div id="scene-art" class="scene-art" aria-hidden="true">🌲 🌙 🌲</div>
+        <p id="scene-tag" class="eyebrow">KAPITEL 1 · SKOGENS KANT</p>
+        <h2 id="scene-title">Ett märkligt uppdrag</h2>
+        <div id="story-text" class="story-text"></div>
+        <div id="choices" class="choices"></div>
+        <p class="tiny-note">Tips: det finns inte alltid ett enda rätt val.</p>
+      </section>
+    </section>
+    <footer>Skapat för nyfikna äventyrare <span>✦</span> Ett spel att spela om och om igen</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
