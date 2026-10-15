@@ -6,6 +6,8 @@
   <meta name="theme-color" content="#273b35">
   <title>Den lilla drakens äventyr</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
 </head>
 <body>
   <main class="game-shell">
@@ -14,7 +16,6 @@
       <div><p class="eyebrow">ETT LITET ROLLSPEL</p><h1>Den lilla drakens äventyr</h1></div>
       <button id="restart" class="quiet-button" type="button" title="Börja om äventyret">↻ <span>Börja om</span></button>
     </header>
-
     <section id="hero-screen" class="panel hero-screen">
       <div class="hero-art" aria-hidden="true"><span class="moon">☾</span><span class="castle">⌂</span><span class="dragon">🐉</span><span class="stars">✦　·　✧</span></div>
       <p class="eyebrow">SKOGEN VISKAR DITT NAMN</p>
@@ -27,7 +28,6 @@
       </div>
       <p class="tiny-note">Inga konton, inga köp — bara fantasi och lite tärningstur.</p>
     </section>
-
     <section id="adventure-screen" class="adventure-layout" hidden>
       <aside class="panel status-panel">
         <div class="avatar" id="hero-avatar">🛡️</div>
@@ -52,6 +52,6 @@
     </section>
     <footer>Skapat för nyfikna äventyrare <span>✦</span> Ett spel att spela om och om igen</footer>
   </main>
-  <script src="script.js"></script>
+  <script type="py" src="./game.py"></script>
 </body>
 </html>
